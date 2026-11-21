@@ -4,7 +4,7 @@ set -euo pipefail
 THRESHOLD="${1:-80}"     # alert at 80% unless you pass another number
 MOUNT="/"                # which disk to check
 
-# Get usage as a plain number, e.g. 23
+# Get usage as a plain number, e.g. 24
 USAGE=$(df --output=pcent "$MOUNT" | tail -n 1 | tr -dc '0-9')
 
 TIMESTAMP=$(date '+%F %T')
